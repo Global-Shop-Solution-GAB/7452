@@ -1,6 +1,6 @@
 ﻿Program.Sub.ScreenSU.Start
 Gui.frmPerf..Create(BaseForm)
-Gui.frmPerf..Size(15240,10635)
+Gui.frmPerf..Size(15255,10800)
 Gui.frmPerf..MinX(0)
 Gui.frmPerf..MinY(0)
 Gui.frmPerf..Position(0,0)
@@ -28,7 +28,7 @@ Gui.frmPerf.picGSSLogo.Visible(True)
 Gui.frmPerf.picGSSLogo.Zorder(0)
 Gui.frmPerf.tabPerf.Create(Tab)
 Gui.frmPerf.tabPerf.Size(15060,8250)
-Gui.frmPerf.tabPerf.Position(30,1095)
+Gui.frmPerf.tabPerf.Position(60,1095)
 Gui.frmPerf.tabPerf.Event(Click,tabPerf_Click)
 Gui.frmPerf.tabPerf.Enabled(True)
 Gui.frmPerf.tabPerf.Visible(True)
@@ -41,7 +41,7 @@ Gui.frmPerf.tabPerf.Caption("Job Performance")
 Gui.frmPerf.tabPerf.SetTab(1)
 Gui.frmPerf.tabPerf.Caption("Indirect")
 Gui.frmPerf.GsGCInd.Create(GsGridControl)
-Gui.frmPerf.GsGCInd.Size(14940,7845)
+Gui.frmPerf.GsGCInd.Size(15030,7815)
 Gui.frmPerf.GsGCInd.Position(0,0)
 Gui.frmPerf.GsGCInd.Parent("tabPerf",1)
 Gui.frmPerf.GsGCInd.Event(RowCellClick,GsGCInd_RowCellClick)
@@ -49,8 +49,9 @@ Gui.frmPerf.GsGCInd.Event(ColumnFilterChanged,GsGCInd_ColumnFilterChanged)
 Gui.frmPerf.GsGCInd.Enabled(True)
 Gui.frmPerf.GsGCInd.Visible(True)
 Gui.frmPerf.GsGCInd.Zorder(0)
+Gui.frmPerf.GsGCInd.Dock(5)
 Gui.frmPerf.GsGCPerf.Create(GsGridControl)
-Gui.frmPerf.GsGCPerf.Size(14940,7845)
+Gui.frmPerf.GsGCPerf.Size(15030,7815)
 Gui.frmPerf.GsGCPerf.Position(0,0)
 Gui.frmPerf.GsGCPerf.Parent("tabPerf",0)
 Gui.frmPerf.GsGCPerf.Event(RowCellClick,GsGCPerf_RowCellClick)
@@ -58,70 +59,80 @@ Gui.frmPerf.GsGCPerf.Event(ColumnFilterChanged,GsGCPerf_ColumnFilterChanged)
 Gui.frmPerf.GsGCPerf.Enabled(True)
 Gui.frmPerf.GsGCPerf.Visible(True)
 Gui.frmPerf.GsGCPerf.Zorder(0)
+Gui.frmPerf.GsGCPerf.Dock(5)
 Gui.frmPerf.frameTotals.Create(Frame)
-Gui.frmPerf.frameTotals.Size(4335,975)
-Gui.frmPerf.frameTotals.Position(10710,9360)
+Gui.frmPerf.frameTotals.Size(5745,885)
+Gui.frmPerf.frameTotals.Position(9345,9405)
 Gui.frmPerf.frameTotals.Enabled(True)
 Gui.frmPerf.frameTotals.Visible(True)
 Gui.frmPerf.frameTotals.Zorder(0)
 Gui.frmPerf.frameTotals.Caption("")
 Gui.frmPerf.frameTotals.FontName("Tahoma")
 Gui.frmPerf.frameTotals.FontSize(8.25)
-Gui.frmPerf.txtTotHrs.Create(TextBox,"",True,1215,300,0,120,480,True,1,"Arial",8,-2147483643,1)
+Gui.frmPerf.txtTotIndGoodParts.Create(TextBox,"",False,1215,300,0,4380,405,True,1,"Arial",8,-2147483643,1)
+Gui.frmPerf.txtTotIndGoodParts.Locked(True)
+Gui.frmPerf.txtTotIndGoodParts.Parent("frameTotals")
+Gui.frmPerf.txtTotHrs.Create(TextBox,"",True,1215,300,0,120,405,True,1,"Arial",8,-2147483643,1)
 Gui.frmPerf.txtTotHrs.Parent("frameTotals")
 Gui.frmPerf.txtTotHrs.NumericOnly(False)
 Gui.frmPerf.txtTotHrs.Locked(True)
-Gui.frmPerf.lblHrs.Create(Label,"Tot Hrs Worked",True,1290,255,0,90,240,True,0,"Arial",8,-986896,0,0)
+Gui.frmPerf.lblHrs.Create(Label,"Tot Hrs Worked",True,1125,210,0,150,165,True,0,"Arial",8,-986896,0,0)
 Gui.frmPerf.lblHrs.Parent("frameTotals")
 Gui.frmPerf.lblHrs.BorderStyle(0)
-Gui.frmPerf.txtEstHrs.Create(TextBox,"",True,1215,300,0,1530,480,True,1,"Arial",8,-2147483643,1)
+Gui.frmPerf.txtEstHrs.Create(TextBox,"",True,1215,300,0,1530,405,True,1,"Arial",8,-2147483643,1)
 Gui.frmPerf.txtEstHrs.Parent("frameTotals")
 Gui.frmPerf.txtEstHrs.NumericOnly(False)
 Gui.frmPerf.txtEstHrs.Locked(True)
-Gui.frmPerf.lblEstHrs.Create(Label,"Tot Est Hrs",True,990,255,0,1650,240,True,0,"Arial",8,-986896,0,0)
+Gui.frmPerf.lblEstHrs.Create(Label,"Tot Est Hrs",True,795,210,0,1740,165,True,0,"Arial",8,-986896,0,0)
 Gui.frmPerf.lblEstHrs.Parent("frameTotals")
 Gui.frmPerf.lblEstHrs.BorderStyle(0)
-Gui.frmPerf.txtTotPerf.Create(TextBox,"",True,1215,300,0,2955,480,True,1,"Arial",8,-2147483643,1)
+Gui.frmPerf.txtTotPerf.Create(TextBox,"",True,1215,300,0,2955,405,True,1,"Arial",8,-2147483643,1)
 Gui.frmPerf.txtTotPerf.Parent("frameTotals")
 Gui.frmPerf.txtTotPerf.NumericOnly(False)
 Gui.frmPerf.txtTotPerf.Locked(True)
-Gui.frmPerf.lblTotPerf.Create(Label,"Tot Performance",True,1350,255,0,2940,240,True,0,"Arial",8,-986896,0,0)
+Gui.frmPerf.lblTotPerf.Create(Label,"Tot Performance",True,1200,210,0,2940,165,True,0,"Arial",8,-986896,0,0)
 Gui.frmPerf.lblTotPerf.Parent("frameTotals")
 Gui.frmPerf.lblTotPerf.BorderStyle(0)
-Gui.frmPerf.txtIndTotPerf.Create(TextBox,"",False,1215,300,0,2955,480,True,1,"Arial",8,-2147483643,1)
+Gui.frmPerf.txtIndTotPerf.Create(TextBox,"",False,1215,300,0,2940,435,True,1,"Arial",8,-2147483643,1)
 Gui.frmPerf.txtIndTotPerf.Parent("frameTotals")
 Gui.frmPerf.txtIndTotPerf.NumericOnly(False)
 Gui.frmPerf.txtIndTotPerf.Locked(True)
-Gui.frmPerf.txtIndTotEst.Create(TextBox,"",False,1215,300,0,1530,480,True,1,"Arial",8,-2147483643,1)
+Gui.frmPerf.txtIndTotEst.Create(TextBox,"",False,1215,300,0,1530,435,True,1,"Arial",8,-2147483643,1)
 Gui.frmPerf.txtIndTotEst.Parent("frameTotals")
 Gui.frmPerf.txtIndTotEst.NumericOnly(False)
 Gui.frmPerf.txtIndTotEst.Locked(True)
-Gui.frmPerf.txtIndTotHrs.Create(TextBox,"",False,1215,300,0,120,480,True,1,"Arial",8,-2147483643,1)
+Gui.frmPerf.txtIndTotHrs.Create(TextBox,"",False,1215,300,0,120,435,True,1,"Arial",8,-2147483643,1)
 Gui.frmPerf.txtIndTotHrs.Parent("frameTotals")
 Gui.frmPerf.txtIndTotHrs.NumericOnly(False)
 Gui.frmPerf.txtIndTotHrs.Locked(True)
-Gui.frmPerf.lblStatus.Create(Label,"Loading Performance....",False,1980,255,0,1500,75,True,0,"Arial",8,-2147483633,0,0)
+Gui.frmPerf.txtTotGoodParts.Create(TextBox,"",True,1215,300,0,4380,435,True,1,"Arial",8,-2147483643,1)
+Gui.frmPerf.txtTotGoodParts.Locked(True)
+Gui.frmPerf.txtTotGoodParts.Parent("frameTotals")
+Gui.frmPerf.lblTotGoodPrts.Create(Label,"Tot Good Parts",True,1080,210,0,4440,165,True,0,"Arial",8,15790320,0,0)
+Gui.frmPerf.lblTotGoodPrts.BorderStyle(0)
+Gui.frmPerf.lblTotGoodPrts.Parent("frameTotals")
+Gui.frmPerf.lblStatus.Create(Label,"Loading Performance....",False,1725,210,0,1530,75,True,0,"Arial",8,-2147483633,0,0)
 Gui.frmPerf.lblStatus.BorderStyle(0)
 Gui.frmPerf.pbStatus.Create(ProgressBar)
 Gui.frmPerf.pbStatus.Visible(False)
 Gui.frmPerf.pbStatus.Size(1950,255)
-Gui.frmPerf.pbStatus.Position(1500,285)
-Gui.frmPerf.lblBegDate.Create(Label,"Beg. Date",True,1320,195,0,30,75,True,0,"Arial",8,-986896,0,0)
+Gui.frmPerf.pbStatus.Position(1530,285)
+Gui.frmPerf.lblBegDate.Create(Label,"Beg. Date",True,705,210,0,60,30,True,0,"Arial",8,-986896,0,0)
 Gui.frmPerf.lblBegDate.BorderStyle(0)
 Gui.frmPerf.dtpBeg.Create(DatePicker)
 Gui.frmPerf.dtpBeg.Size(1425,285)
-Gui.frmPerf.dtpBeg.Position(30,225)
+Gui.frmPerf.dtpBeg.Position(60,225)
 Gui.frmPerf.dtpBeg.Enabled(True)
 Gui.frmPerf.dtpBeg.Visible(True)
 Gui.frmPerf.dtpBeg.Zorder(0)
 Gui.frmPerf.dtpBeg.CheckBox(False)
 Gui.frmPerf.dtpBeg.FontName("Tahoma")
 Gui.frmPerf.dtpBeg.FontSize(8.25)
-Gui.frmPerf.lblEndDate.Create(Label,"End Date",True,1320,195,0,30,615,True,0,"Arial",8,-986896,0,0)
+Gui.frmPerf.lblEndDate.Create(Label,"End Date",True,645,210,0,60,585,True,0,"Arial",8,-986896,0,0)
 Gui.frmPerf.lblEndDate.BorderStyle(0)
 Gui.frmPerf.dtpEnd.Create(DatePicker)
 Gui.frmPerf.dtpEnd.Size(1425,285)
-Gui.frmPerf.dtpEnd.Position(30,765)
+Gui.frmPerf.dtpEnd.Position(60,765)
 Gui.frmPerf.dtpEnd.Enabled(True)
 Gui.frmPerf.dtpEnd.Visible(True)
 Gui.frmPerf.dtpEnd.Zorder(0)
@@ -130,7 +141,7 @@ Gui.frmPerf.dtpEnd.FontName("Tahoma")
 Gui.frmPerf.dtpEnd.FontSize(8.25)
 Gui.frmPerf.cmdRefresh.Create(Button)
 Gui.frmPerf.cmdRefresh.Size(510,375)
-Gui.frmPerf.cmdRefresh.Position(1515,720)
+Gui.frmPerf.cmdRefresh.Position(1545,720)
 Gui.frmPerf.cmdRefresh.Caption("REFRESH")
 Gui.frmPerf.cmdRefresh.Event(Click,cmdRefresh_Click)
 Gui.frmPerf.cmdRefresh.Enabled(True)
@@ -568,9 +579,12 @@ Program.Sub.LoadDTPR_GetTypeRowByRow.Start
 	'F.Intrinsic.String.Build("Select Rtrim(Case When Left(A.Employee,1) = '*' Then (SUBSTRING(A.Employee,2,LENGTH(A.Employee)-1)) Else A.Employee End) As Employee,RTrim(A.Dept_Emp) As Dept_Emp,A.Shift_Shift As Shift,A.Charge_Date,Coalesce(C.Part,'') AS Part,'' As DISPLAY_PART,C.Location,C.Part_Description,A.Job,A.Suffix,A.Seq,B.Description,RTrim(A.Machine) As Machine,B.Units_Open - B.Units_Complete As Rem_Pcs,CONCAT(A.Job,A.Suffix) AS JS,A.Empl,A.Pieces_Compltd,A.Pieces_Scrap,Case When B.Crew_Size = 0 Or B.Crew_Size = '' Then 1 Else B.Crew_Size End As Crew_Size,A.Hours_Worked,A.Amt_Standard,CASE A.FLAG_INDIRECT WHEN '' THEN 'Run' WHEN 'D' THEN 'Run' WHEN 'S' THEN 'Setup' WHEN 'I' THEN 'Indirect' END AS Flag_Indirect From V_Job_Detail A Left Join V_Job_Operations B on A.Job = B.Job And A.Suffix = B.Suffix And A.Seq = B.Seq Left Join V_Job_Header C on B.Job = C.Job And B.Suffix = C.Suffix Where A.LMO = 'L' And A.Empl Not Like '#%' And A.Edited_WO_Dtl <> 'R' And A.Charge_Date Between '{0}' And '{1}';",V.Local.dBegDate.PervasiveDate,V.Local.dEndDate.PervasiveDate,V.Local.sSQL)
 	' Added for History
 	F.Intrinsic.Control.If(V.Screen.frmPerf!chkCalHist.Value,=,1)
-		F.Intrinsic.String.Build("Select Rtrim(Case When Left(A.Employee_Name,1) = '*' Then (SUBSTRING(A.Employee_Name,2,LENGTH(A.Employee_Name)-1)) Else A.Employee_Name End) As Employee,RTrim(A.Dept_Employee) As Dept_Emp,A.Shift_Shift As Shift,A.Charge_Date,Coalesce(C.Part,'') AS Part,'' As DISPLAY_PART,C.Location,C.Part_Description,A.Job,A.Suffix,A.Seq,B.Description,RTrim(A.Machine) As Machine,CAST(B.Units_Open - B.Units_Complete AS DOUBLE) As Rem_Pcs,CONCAT(A.Job,A.Suffix) AS JS,A.Employee AS Empl,A.Pieces_Compltd,A.Pieces_Scrap,Case When B.Crew_Size = 0 Or B.Crew_Size = '' Then 1 Else B.Crew_Size End As Crew_Size,A.Hours_Worked,A.Amt_Standard,CASE A.FLAG_INDIRECT WHEN '' THEN 'Run' WHEN 'D' THEN 'Run' WHEN 'S' THEN 'Setup' WHEN 'I' THEN 'Indirect' END AS Flag_Indirect From V_Job_Hist_Dtl A Left Join V_Job_Hist_Ops B on A.Job = B.Job And A.Suffix = B.Suffix And A.Seq = B.Seq Left Join V_Job_Hist_Mast C on B.Job = C.Job And B.Suffix = C.Suffix Where A.LMO = 'L' And A.Employee Not Like '#%' And A.Edited_WO_Dtl <> 'R' And A.Charge_Date Between '{0}' And '{1}';",V.Local.dBegDate.PervasiveDate,V.Local.dEndDate.PervasiveDate,V.Local.sSQL)
+	'	F.Intrinsic.String.Build("Select Rtrim(Case When Left(A.Employee_Name,1) = '*' Then (SUBSTRING(A.Employee_Name,2,LENGTH(A.Employee_Name)-1)) Else A.Employee_Name End) As Employee,RTrim(A.Dept_Employee) As Dept_Emp,A.Shift_Shift As Shift,A.Charge_Date,Coalesce(C.Part,'') AS Part,'' As DISPLAY_PART,C.Location,C.Part_Description,A.Job,A.Suffix,A.Seq,B.Description,RTrim(A.Machine) As Machine,CAST(B.Units_Open - B.Units_Complete AS DOUBLE) As Rem_Pcs,CONCAT(A.Job,A.Suffix) AS JS,A.Employee AS Empl,A.Pieces_Compltd,A.Pieces_Scrap,Case When B.Crew_Size = 0 Or B.Crew_Size = '' Then 1 Else B.Crew_Size End As Crew_Size,A.Hours_Worked,A.Amt_Standard,CASE A.FLAG_INDIRECT WHEN '' THEN 'Run' WHEN 'D' THEN 'Run' WHEN 'S' THEN 'Setup' WHEN 'I' THEN 'Indirect' END AS Flag_Indirect From V_Job_Hist_Dtl A Left Join V_Job_Hist_Ops B on A.Job = B.Job And A.Suffix = B.Suffix And A.Seq = B.Seq Left Join V_Job_Hist_Mast C on B.Job = C.Job And B.Suffix = C.Suffix Where A.LMO = 'L' And A.Employee Not Like '#%' And A.Edited_WO_Dtl <> 'R' And A.Charge_Date Between '{0}' And '{1}';",V.Local.dBegDate.PervasiveDate,V.Local.dEndDate.PervasiveDate,V.Local.sSQL)
+	
+		'adding new columns
+		F.Intrinsic.String.Build("Select Rtrim(Case When Left(A.Employee_Name,1) = '*' Then (SUBSTRING(A.Employee_Name,2,LENGTH(A.Employee_Name)-1)) Else A.Employee_Name End) As Employee,RTrim(A.Dept_Employee) As Dept_Emp,A.Shift_Shift As Shift,A.Charge_Date,Coalesce(C.Part,'') AS Part,'' As DISPLAY_PART,C.Location,C.Part_Description,A.Job,A.Suffix,A.Seq,B.Description,RTrim(A.Machine) As Machine, RTRIM(D.WC_DEPT) AS WC_DEPT, CAST(B.Units_Open - B.Units_Complete AS DOUBLE) As Rem_Pcs,CONCAT(A.Job,A.Suffix) AS JS,A.Employee AS Empl,A.Pieces_Compltd,A.Pieces_Scrap,Case When B.Crew_Size = 0 Or B.Crew_Size = '' Then 1 Else B.Crew_Size End As Crew_Size,A.Hours_Worked,A.Amt_Standard,CASE A.FLAG_INDIRECT WHEN '' THEN 'Run' WHEN 'D' THEN 'Run' WHEN 'S' THEN 'Setup' WHEN 'I' THEN 'Indirect' END AS Flag_Indirect, B.FLAG_CLOSED, B.DATE_COMPLETED From V_Job_Hist_Dtl A Left Join V_Job_Hist_Ops B on A.Job = B.Job And A.Suffix = B.Suffix And A.Seq = B.Seq Left Join V_Job_Hist_Mast C on B.Job = C.Job And B.Suffix = C.Suffix LEFT JOIN V_WORKCENTERS D ON A.MACHINE = D.MACHINE Where A.LMO = 'L' And A.Employee Not Like '#%' And A.Edited_WO_Dtl <> 'R' And A.Charge_Date Between '{0}' And '{1}';",V.Local.dBegDate.PervasiveDate,V.Local.dEndDate.PervasiveDate,V.Local.sSQL)
 	F.Intrinsic.Control.Else
-      	F.Intrinsic.String.Build("Select Rtrim(Case When Left(A.Employee,1) = '*' Then (SUBSTRING(A.Employee,2,LENGTH(A.Employee)-1)) Else A.Employee End) As Employee,RTrim(A.Dept_Emp) As Dept_Emp,A.Shift_Shift As Shift,A.Charge_Date,Coalesce(C.Part,'') AS Part,'' As DISPLAY_PART,C.Location,C.Part_Description,A.Job,A.Suffix,A.Seq,B.Description,RTrim(A.Machine) As Machine,CAST(B.Units_Open - B.Units_Complete AS DOUBLE) As Rem_Pcs,CONCAT(A.Job,A.Suffix) AS JS,A.Empl,A.Pieces_Compltd,A.Pieces_Scrap,Case When B.Crew_Size = 0 Or B.Crew_Size = '' Then 1 Else B.Crew_Size End As Crew_Size,A.Hours_Worked,A.Amt_Standard,CASE A.FLAG_INDIRECT WHEN '' THEN 'Run' WHEN 'D' THEN 'Run' WHEN 'S' THEN 'Setup' WHEN 'I' THEN 'Indirect' END AS Flag_Indirect From V_Job_Detail A Left Join V_Job_Operations B on A.Job = B.Job And A.Suffix = B.Suffix And A.Seq = B.Seq Left Join V_Job_Header C on B.Job = C.Job And B.Suffix = C.Suffix Where A.LMO = 'L' And A.Empl Not Like '#%' And A.Edited_WO_Dtl <> 'R' And A.Charge_Date Between '{0}' And '{1}';",V.Local.dBegDate.PervasiveDate,V.Local.dEndDate.PervasiveDate,V.Local.sSQL)
+  	    	F.Intrinsic.String.Build("Select Rtrim(Case When Left(A.Employee,1) = '*' Then (SUBSTRING(A.Employee,2,LENGTH(A.Employee)-1)) Else A.Employee End) As Employee,RTrim(A.Dept_Emp) As Dept_Emp,A.Shift_Shift As Shift,A.Charge_Date,Coalesce(C.Part,'') AS Part,'' As DISPLAY_PART,C.Location,C.Part_Description,A.Job,A.Suffix,A.Seq,B.Description,RTrim(A.Machine) As Machine,RTRIM(D.WC_DEPT) AS WC_DEPT, CAST(B.Units_Open - B.Units_Complete AS DOUBLE) As Rem_Pcs,CONCAT(A.Job,A.Suffix) AS JS,A.Empl,A.Pieces_Compltd,A.Pieces_Scrap,Case When B.Crew_Size = 0 Or B.Crew_Size = '' Then 1 Else B.Crew_Size End As Crew_Size,A.Hours_Worked,A.Amt_Standard,CASE A.FLAG_INDIRECT WHEN '' THEN 'Run' WHEN 'D' THEN 'Run' WHEN 'S' THEN 'Setup' WHEN 'I' THEN 'Indirect' END AS Flag_Indirect, B.FLAG_CLOSED, B.DATE_COMPLETED From V_Job_Detail A Left Join V_Job_Operations B on A.Job = B.Job And A.Suffix = B.Suffix And A.Seq = B.Seq Left Join V_Job_Header C on B.Job = C.Job And B.Suffix = C.Suffix LEFT JOIN V_WORKCENTERS D ON A.MACHINE = D.MACHINE Where A.LMO = 'L' And A.Empl Not Like '#%' And A.Edited_WO_Dtl <> 'R' And A.Charge_Date Between '{0}' And '{1}';",V.Local.dBegDate.PervasiveDate,V.Local.dEndDate.PervasiveDate,V.Local.sSQL)
 	F.Intrinsic.Control.EndIf
 	F.Data.DataTable.CreateFromSQL("dtJD","con",V.Local.sSQL,True)
 
@@ -581,7 +595,7 @@ Program.Sub.LoadDTPR_GetTypeRowByRow.Start
 	F.Intrinsic.Control.EndIf
 
 	F.Data.DataView.Create("dtJD","dvJD")
-	F.Data.DataView.ToDataTableDistinct("dtJD","dvJD","dtPR","Employee*!*Dept_Emp*!*Shift*!*Charge_Date*!*Part*!*Display_Part*!*Location*!*Part_Description*!*Job*!*Suffix*!*Seq*!*Description*!*Machine*!*Rem_Pcs*!*JS*!*Empl*!*Crew_Size*!*Flag_Indirect",True)
+	F.Data.DataView.ToDataTableDistinct("dtJD","dvJD","dtPR","Employee*!*Dept_Emp*!*Shift*!*Charge_Date*!*Part*!*Display_Part*!*Location*!*Part_Description*!*Job*!*Suffix*!*Seq*!*Description*!*Machine*!*Rem_Pcs*!*JS*!*Empl*!*Crew_Size*!*Flag_Indirect*!*WC_DEPT*!*FLAG_CLOSED*!*DATE_COMPLETED",True)
 	F.Data.DataTable.AddColumn("dtPR","PIECES_COMPLTD",Float,0)
 	F.Data.DataTable.AddColumn("dtPR","PIECES_SCRAP",Float,0)
 	F.Data.DataTable.AddColumn("dtPR","HOURS_WORKED",Float,0)
@@ -656,7 +670,12 @@ Program.Sub.LoadDTPR_GetTypeRowByRow.Start
 		
 	F.Intrinsic.Control.EndIf
 	
-	F.Data.DataView.Create("dtPR","dvPR",22,"FLAG_INDIRECT <> 'Indirect'","")
+	'Add expression column to calcuate the square footage. Calulcate as good pcs x the standard hours for the part in inventory master > options
+'-	F.Data.DataTable.AddExpressionColumn("dtPR", "SQ_FT", "FLOAT", "([PIECES_COMPLTD]*[STD_HRS])")
+	
+	
+	'F.Data.DataView.Create("dtPR","dvPR",22,"FLAG_INDIRECT <> 'Indirect'","")
+	F.Data.DataView.Create("dtPR","dvPR",22,"","")
 	F.Data.DataView.ToDataTable("dtPR","dvPR","dtPR1",True)
 
 	F.Intrinsic.Control.CallSub(FormatGrid,"GSGC","GsGCPerf","GV","gvPR","DT","dtPR1")
@@ -698,9 +717,9 @@ Program.Sub.LoadDTPR_GetOnlyMostRecentType.Start
 	V.Global.bLoadData.Set(True)
 
 	F.Intrinsic.Control.If(V.Screen.frmPerf!chkCalHist.Value,=,1)
-		F.Intrinsic.String.Build("Select Rtrim(Case When Left(A.Employee_Name,1) = '*' Then (SUBSTRING(A.Employee_Name,2,LENGTH(A.Employee_Name)-1)) Else A.Employee_Name End) As Employee,RTrim(A.Dept_Employee) As Dept_Emp,A.Shift_Shift As Shift,A.Charge_Date,Coalesce(C.Part,'') AS Part,'' As DISPLAY_PART,C.Location,C.Part_Description,A.Job,A.Suffix,A.Seq,B.Description,RTrim(A.Machine) As Machine,CAST(B.Units_Open - B.Units_Complete AS DOUBLE) As Rem_Pcs,CONCAT(A.Job,A.Suffix) AS JS,A.Employee AS Empl,A.Pieces_Compltd,A.Pieces_Scrap,Case When B.Crew_Size = 0 Or B.Crew_Size = '' Then 1 Else B.Crew_Size End As Crew_Size,A.Hours_Worked,A.Amt_Standard,CASE A.FLAG_INDIRECT WHEN '' THEN 'Run' WHEN 'D' THEN 'Run' WHEN 'S' THEN 'Setup' WHEN 'I' THEN 'Indirect' END AS Flag_Indirect From V_Job_Hist_Dtl A Left Join V_Job_Hist_Ops B on A.Job = B.Job And A.Suffix = B.Suffix And A.Seq = B.Seq Left Join V_Job_Hist_Mast C on B.Job = C.Job And B.Suffix = C.Suffix Where A.LMO = 'L' And A.Employee Not Like '#%' And A.Edited_WO_Dtl <> 'R' And A.Charge_Date Between '{0}' And '{1}';",V.Local.dBegDate.PervasiveDate,V.Local.dEndDate.PervasiveDate,V.Local.sSQL)
+		F.Intrinsic.String.Build("Select Rtrim(Case When Left(A.Employee_Name,1) = '*' Then (SUBSTRING(A.Employee_Name,2,LENGTH(A.Employee_Name)-1)) Else A.Employee_Name End) As Employee,RTrim(A.Dept_Employee) As Dept_Emp,A.Shift_Shift As Shift,A.Charge_Date,Coalesce(C.Part,'') AS Part,'' As DISPLAY_PART,C.Location,C.Part_Description,A.Job,A.Suffix,A.Seq,B.Description,RTrim(A.Machine) As Machine,RTRIM(D.WC_DEPT) AS WC_DEPT,CAST(B.Units_Open - B.Units_Complete AS DOUBLE) As Rem_Pcs,CONCAT(A.Job,A.Suffix) AS JS,A.Employee AS Empl,A.Pieces_Compltd,A.Pieces_Scrap,Case When B.Crew_Size = 0 Or B.Crew_Size = '' Then 1 Else B.Crew_Size End As Crew_Size,A.Hours_Worked,A.Amt_Standard,CASE A.FLAG_INDIRECT WHEN '' THEN 'Run' WHEN 'D' THEN 'Run' WHEN 'S' THEN 'Setup' WHEN 'I' THEN 'Indirect' END AS Flag_Indirect, B.FLAG_CLOSED, B.DATE_COMPLETED From V_Job_Hist_Dtl A Left Join V_Job_Hist_Ops B on A.Job = B.Job And A.Suffix = B.Suffix And A.Seq = B.Seq Left Join V_Job_Hist_Mast C on B.Job = C.Job And B.Suffix = C.Suffix LEFT JOIN V_WORKCENTERS D ON A.MACHINE = D.MACHINE Where A.LMO = 'L' And A.Employee Not Like '#%' And A.Edited_WO_Dtl <> 'R' And A.Charge_Date Between '{0}' And '{1}';",V.Local.dBegDate.PervasiveDate,V.Local.dEndDate.PervasiveDate,V.Local.sSQL)
 	F.Intrinsic.Control.Else
-		F.Intrinsic.String.Build("Select Rtrim(Case When Left(A.Employee,1) = '*' Then (SUBSTRING(A.Employee,2,LENGTH(A.Employee)-1)) Else A.Employee End) As Employee,RTrim(A.Dept_Emp) As Dept_Emp,A.Shift_Shift As Shift,A.Charge_Date,Coalesce(C.Part,'') AS Part,'' As DISPLAY_PART,C.Location,C.Part_Description,A.Job,A.Suffix,A.Seq,B.Description,RTrim(A.Machine) As Machine,CAST(B.Units_Open - B.Units_Complete AS DOUBLE) As Rem_Pcs,CONCAT(A.Job,A.Suffix) AS JS,A.Empl,A.Pieces_Compltd,A.Pieces_Scrap,Case When B.Crew_Size = 0 Or B.Crew_Size = '' Then 1 Else B.Crew_Size End As Crew_Size,A.Hours_Worked,A.Amt_Standard,A.Flag_Indirect From V_Job_Detail A Left Join V_Job_Operations B on A.Job = B.Job And A.Suffix = B.Suffix And A.Seq = B.Seq Left Join V_Job_Header C on B.Job = C.Job And B.Suffix = C.Suffix Where A.LMO = 'L' And A.Empl Not Like '#%' And A.Edited_WO_Dtl <> 'R' And A.Charge_Date Between '{0}' And '{1}';",V.Local.dBegDate.PervasiveDate,V.Local.dEndDate.PervasiveDate,V.Local.sSQL)
+		F.Intrinsic.String.Build("Select Rtrim(Case When Left(A.Employee,1) = '*' Then (SUBSTRING(A.Employee,2,LENGTH(A.Employee)-1)) Else A.Employee End) As Employee,RTrim(A.Dept_Emp) As Dept_Emp,A.Shift_Shift As Shift,A.Charge_Date,Coalesce(C.Part,'') AS Part,'' As DISPLAY_PART,C.Location,C.Part_Description,A.Job,A.Suffix,A.Seq,B.Description,RTrim(A.Machine) As Machine,RTRIM(D.WC_DEPT) AS WC_DEPT,CAST(B.Units_Open - B.Units_Complete AS DOUBLE) As Rem_Pcs,CONCAT(A.Job,A.Suffix) AS JS,A.Empl,A.Pieces_Compltd,A.Pieces_Scrap,Case When B.Crew_Size = 0 Or B.Crew_Size = '' Then 1 Else B.Crew_Size End As Crew_Size,A.Hours_Worked,A.Amt_Standard,A.Flag_Indirect, B.FLAG_CLOSED, B.DATE_COMPLETED From V_Job_Detail A Left Join V_Job_Operations B on A.Job = B.Job And A.Suffix = B.Suffix And A.Seq = B.Seq Left Join V_Job_Header C on B.Job = C.Job And B.Suffix = C.Suffix LEFT JOIN V_WORKCENTERS D ON A.MACHINE = D.MACHINE Where A.LMO = 'L' And A.Empl Not Like '#%' And A.Edited_WO_Dtl <> 'R' And A.Charge_Date Between '{0}' And '{1}';",V.Local.dBegDate.PervasiveDate,V.Local.dEndDate.PervasiveDate,V.Local.sSQL)
 	F.Intrinsic.Control.EndIf
 	F.Data.DataTable.CreateFromSQL("dtJD","con",V.Local.sSQL,True)
 
@@ -711,7 +730,7 @@ Program.Sub.LoadDTPR_GetOnlyMostRecentType.Start
 	F.Intrinsic.Control.EndIf
 
 	F.Data.DataView.Create("dtJD","dvJD")
-	F.Data.DataView.ToDataTableDistinct("dtJD","dvJD","dtPR","Employee*!*Dept_Emp*!*Shift*!*Charge_Date*!*Part*!*Display_Part*!*Location*!*Part_Description*!*Job*!*Suffix*!*Seq*!*Description*!*Machine*!*Rem_Pcs*!*JS*!*Empl*!*Crew_Size",True)
+	F.Data.DataView.ToDataTableDistinct("dtJD","dvJD","dtPR","Employee*!*Dept_Emp*!*Shift*!*Charge_Date*!*Part*!*Display_Part*!*Location*!*Part_Description*!*Job*!*Suffix*!*Seq*!*Description*!*Machine*!*Rem_Pcs*!*JS*!*Empl*!*Crew_Size*!*WC_DEPT*!*FLAG_CLOSED*!*DATE_COMPLETED",True)
 	F.Data.DataTable.AddColumn("dtPR","PIECES_COMPLTD",Float,0)
 	F.Data.DataTable.AddColumn("dtPR","PIECES_SCRAP",Float,0)
 	F.Data.DataTable.AddColumn("dtPR","HOURS_WORKED",Float,0)
@@ -808,7 +827,8 @@ Program.Sub.LoadDTPR_GetOnlyMostRecentType.Start
 		
 	F.Intrinsic.Control.EndIf
 	
-	F.Data.DataView.Create("dtPR","dvPR",22,"FLAG_INDIRECT <> 'Indirect'","")
+	'F.Data.DataView.Create("dtPR","dvPR",22,"FLAG_INDIRECT <> 'Indirect'","")
+	F.Data.DataView.Create("dtPR","dvPR",22,"","")
 	F.Data.DataView.ToDataTable("dtPR","dvPR","dtPR1",True)
 
 	F.Intrinsic.Control.CallSub(FormatGrid,"GSGC","GsGCPerf","GV","gvPR","DT","dtPR1")
@@ -855,6 +875,9 @@ Program.Sub.FormatGrid.Start
 	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"HOURS_WORKED","VisibleIndex","17")
 	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"PERFORM","VisibleIndex","18")
 	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"FLAG_INDIRECT","VisibleIndex","19")
+	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"WC_DEPT","VisibleIndex","20")
+	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"FLAG_CLOSED","VisibleIndex","21")
+	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"DATE_COMPLETED","VisibleIndex","21")
 
 	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"JS","Visible",False)
 	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"EMPL","Visible",False)
@@ -885,6 +908,9 @@ Program.Sub.FormatGrid.Start
 	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"FLAG_INDIRECT","Caption","Type")
 	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"PROJECT_NO","Caption","Project")
 	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"PHASE_NO","Caption","Phase")
+	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"WC_DEPT","Caption","WC Dept")
+	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"FLAG_CLOSED","Caption","Closed")
+	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"DATE_COMPLETED","Caption","Date Closed")
 
 	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"EMPLOYEE","MinWidth","150")
 	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"DEPT_EMP","MinWidth","40")
@@ -908,6 +934,9 @@ Program.Sub.FormatGrid.Start
 	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"FLAG_INDIRECT","MinWidth","85")
 	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"PROJECT_NO","MinWidth","85")
 	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"PHASE_NO","MinWidth","85")
+	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"WC_DEPT","MinWidth","85")
+	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"FLAG_CLOSED","MinWidth","50")
+	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"DATE_COMPLETED","MinWidth","85")
 	
 	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"EMPLOYEE","HeaderFontBold",True)
 	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"DEPT_EMP","HeaderFontBold",True)
@@ -931,6 +960,9 @@ Program.Sub.FormatGrid.Start
 	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"FLAG_INDIRECT","HeaderFontBold",True)
 	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"PROJECT_NO","HeaderFontBold",True)
 	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"PHASE_NO","HeaderFontBold",True)
+	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"WC_DEPT","HeaderFontBold",True)
+	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"FLAG_CLOSED","HeaderFontBold",True)
+	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"DATE_COMPLETED","HeaderFontBold",True)
 
 	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"DEPT_EMP","CellHAlignment","Center")
 	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"SHIFT","CellHAlignment","Center")
@@ -942,6 +974,9 @@ Program.Sub.FormatGrid.Start
 	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"FLAG_INDIRECT","CellHAlignment","Center")
 	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"PROJECT_NO","CellHAlignment","Center")
 	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"PHASE_NO","CellHAlignment","Center")
+	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"WC_DEPT","CellHAlignment","Center")
+	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"FLAG_CLOSED","CellHAlignment","Center")
+	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"DATE_COMPLETED","CellHAlignment","Center")
 
 	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"DEPT_EMP","HeaderHAlignment","Center")
 	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"SHIFT","HeaderHAlignment","Center")
@@ -961,6 +996,9 @@ Program.Sub.FormatGrid.Start
 	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"FLAG_INDIRECT","HeaderHAlignment","Center")
 	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"PROJECT_NO","HeaderHAlignment","Center")
 	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"PHASE_NO","HeaderHAlignment","Center")
+	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"WC_DEPT","HeaderHAlignment","Center")
+	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"FLAG_CLOSED","HeaderHAlignment","Center")
+	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"DATE_COMPLETED","HeaderHAlignment","Center")
 	
 	F.Intrinsic.Control.If(V.Global.bWoCallwrapperShouldRun)
 		Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"JOB","CellForeColor",v.Enum.ThemeColors!AccentColor)
@@ -976,6 +1014,7 @@ Program.Sub.FormatGrid.Start
 	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"REM_PCS","DisplayCustomString","###,###,##0")
 
 	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"CHARGE_DATE","DisplayCustomDatetime","d")
+	Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"DATE_COMPLETED","DisplayCustomDatetime","d")
 	
 	F.Intrinsic.Control.If(V.Global.bLongPart)
 		Gui.frmPerf.[V.Args.GSGC].SetColumnProperty(V.Args.GV,"DISPLAY_PART","MinWidth","250")
@@ -1040,7 +1079,8 @@ Program.Sub.GsGCPerf_ColumnFilterChanged.Start
 
 	Gui.frmPerf.GsGCPerf.FilterToWhereClause("gvPR", V.Local.sFilter)
 	Function.Intrinsic.Control.If(V.Local.sFilter.Trim, = , "")
-		F.Intrinsic.Control.CallSub(loadtotals,"Caller","dtPR1","Filter","FLAG_INDIRECT <> 'Indirect'")
+'		F.Intrinsic.Control.CallSub(loadtotals,"Caller","dtPR1","Filter","FLAG_INDIRECT <> 'Indirect'")
+		F.Intrinsic.Control.CallSub(loadtotals,"Caller","dtPR1","Filter","")
 	Function.Intrinsic.Control.Else
 '	
 '		V.Local.sFilter.Set(V.Args.ActiveFilterExpression)
@@ -1084,7 +1124,8 @@ Program.Sub.GsGCPerf_ColumnFilterChanged.Start
 '			F.Intrinsic.Control.CallSub(loadtotals,"Caller","dtPR1","Filter",V.Local.sFilter)
 '		F.Intrinsic.Control.EndIf
 		
-		F.Intrinsic.String.Build("{0} And FLAG_INDIRECT <> 'Indirect'",V.Local.sFilter,V.Local.sFilter)
+	'	F.Intrinsic.String.Build("{0} And FLAG_INDIRECT <> 'Indirect'",V.Local.sFilter,V.Local.sFilter)
+		F.Intrinsic.String.Build("{0} ",V.Local.sFilter,V.Local.sFilter)
 		F.Intrinsic.Control.CallSub(loadtotals,"Caller","dtPR1","Filter",V.Local.sFilter)
 		
 	Function.Intrinsic.Control.EndIf
@@ -1226,10 +1267,12 @@ Program.Sub.LoadTotals.Start
 
 	F.Intrinsic.Control.SelectCase(V.Args.Caller)
 		F.Intrinsic.Control.Case("First")
-			F.Data.DataTable.Compute("dtPR1","SUM(AMT_STANDARD)","FLAG_INDIRECT <> 'Indirect'",V.Local.fTotal)
+			'F.Data.DataTable.Compute("dtPR1","SUM(AMT_STANDARD)","FLAG_INDIRECT <> 'Indirect'",V.Local.fTotal)
+			F.Data.DataTable.Compute("dtPR1","SUM(AMT_STANDARD)","",V.Local.fTotal)
 			F.Intrinsic.String.Format(V.Local.fTotal,"#,###,###,##0.00",V.Local.sTotal)
 			Gui.frmPerf.txtEstHrs.Text(V.Local.sTotal)
-			F.Data.DataTable.Compute("dtPR1","SUM(HOURS_WORKED)","FLAG_INDIRECT <> 'Indirect'",V.Local.fTotal)
+			'F.Data.DataTable.Compute("dtPR1","SUM(HOURS_WORKED)","FLAG_INDIRECT <> 'Indirect'",V.Local.fTotal)
+			F.Data.DataTable.Compute("dtPR1","SUM(AMT_STANDARD)","",V.Local.fTotal)
 			F.Intrinsic.String.Format(V.Local.fTotal,"#,###,###,##0.00",V.Local.sTotal)
 			Gui.frmPerf.txtTotHrs.Text(V.Local.sTotal)
 			F.Intrinsic.Control.If(v.Screen.frmPerf!txtTotHrs.Text,<>,0)
@@ -1271,6 +1314,14 @@ Program.Sub.LoadTotals.Start
 			F.Intrinsic.Control.EndIf
 			F.Intrinsic.String.Format(V.Local.fTotal,"#,###,###,##0.00",V.Local.sTotal)
 			Gui.frmPerf.txtTotPerf.Text(V.Local.sTotal)
+			
+			'calculate total good pieces
+			V.Local.fTotal.Set(0)
+			V.Local.sTotal.Set("")
+			
+			F.Data.DataTable.Compute("dtPR1","SUM(PIECES_COMPLTD)",V.Args.Filter,V.Local.fTotal)
+			F.Intrinsic.String.Format(V.Local.fTotal,"#,###,###,##0.00",V.Local.sTotal)
+			Gui.frmPerf.txtTotGoodParts.Text(V.Local.sTotal)
 
 		F.Intrinsic.Control.Case("dtInd")
 			F.Data.DataTable.Compute("dtInd","SUM(AMT_STANDARD)",V.Args.Filter,V.Local.fTotal)
@@ -1287,6 +1338,14 @@ Program.Sub.LoadTotals.Start
 			F.Intrinsic.Control.EndIf
 			F.Intrinsic.String.Format(V.Local.fTotal,"#,###,###,##0.00",V.Local.sTotal)
 			Gui.frmPerf.txtIndTotPerf.Text(V.Local.sTotal)
+			
+			'calculate total good pieces
+			V.Local.fTotal.Set(0)
+			V.Local.sTotal.Set("")
+			
+			F.Data.DataTable.Compute("dtInd","SUM(PIECES_COMPLTD)",V.Args.Filter,V.Local.fTotal)
+			F.Intrinsic.String.Format(V.Local.fTotal,"#,###,###,##0.00",V.Local.sTotal)
+			Gui.frmPerf.txtTotIndGoodParts.Text(V.Local.sTotal)
 	F.Intrinsic.Control.EndSelect
 	
 	F.Intrinsic.Control.Catch
@@ -1305,17 +1364,21 @@ Program.Sub.tabPerf_Click.Start
 			Gui.frmPerf.txtEstHrs.Visible(True)
 			Gui.frmPerf.txtTotHrs.Visible(True)
 			Gui.frmPerf.txtTotPerf.Visible(True)
+			Gui.frmPerf.txtTotGoodParts.Visible(True)
 			Gui.frmPerf.txtIndTotEst.Visible(False)
 			Gui.frmPerf.txtIndTotHrs.Visible(False)
 			Gui.frmPerf.txtIndTotPerf.Visible(False)
+			Gui.frmPerf.txtTotIndGoodParts.Visible(False)
 
 		F.Intrinsic.Control.Case(1)
 			Gui.frmPerf.txtEstHrs.Visible(False)
 			Gui.frmPerf.txtTotHrs.Visible(False)
 			Gui.frmPerf.txtTotPerf.Visible(False)
+			Gui.frmPerf.txtTotGoodParts.Visible(False)
 			Gui.frmPerf.txtIndTotEst.Visible(True)
 			Gui.frmPerf.txtIndTotHrs.Visible(True)
 			Gui.frmPerf.txtIndTotPerf.Visible(True)
+			Gui.frmPerf.txtTotIndGoodParts.Visible(True)
 
 	F.Intrinsic.Control.EndSelect
 	
@@ -1396,5 +1459,5 @@ Program.Sub.Deserialize.End
 Program.Sub.Comments.Start
 ${$0$}$Employee Performance$}$JoeyT and AGV$}$1/13/2017 5:02:24 PM$}$False
 ${$5$}$2.0.0.0$}$2
-${$6$}$acollins$}$20240225171025666$}$h98hERc2yV72q0GaUGlwSaoK/aefTdVkC8twM5WMoD9f9gNfnTqmHAGb/o0NIil4e71s9a6L9XEO6/39kBfHOQ==
+${$6$}$acollins$}$20240229131658984$}$h98hERc2yV72q0GaUGlwSaoK/aefTdVkC8twM5WMoD9+zsohcUzcM/dDap3CaK0/9L1LX0CBAeWzbqLkAw5xzQ==
 Program.Sub.Comments.End
